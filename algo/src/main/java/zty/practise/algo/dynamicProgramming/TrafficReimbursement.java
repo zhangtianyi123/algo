@@ -145,7 +145,7 @@ public class TrafficReimbursement {
 		}
 		
 		for(int i=1; i<bills.size(); i++) {
-			for(int sumAmount=amountLimit*2; sumAmount>=0; sumAmount--) {
+			for(int sumAmount=amountLimit*2-bills.get(i); sumAmount>=0; sumAmount--) {
 				if(states[sumAmount]) {
 					states[sumAmount + bills.get(i)] = true;
 				}
